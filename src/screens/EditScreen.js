@@ -12,7 +12,7 @@ const EditScreen = ({ navigation }) => {
     <BlogPostForm
       initialValues={{ title: blogPost.title, content: blogPost.content }}
       onSubmit={(title, content) => {
-        editBlogPost(blogPostId, title, content);
+        updateBlogPost(blogPostId, title, content, () => navigation.pop());
       }}
     />
   );
